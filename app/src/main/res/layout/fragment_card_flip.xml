@@ -4,46 +4,28 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/flipView"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        app:cardCornerRadius="10dp">
+        app:flipOnTouch="false"
+        app:flipEnabled="true"
+        app:flipDuration="400"
+        app:flipType="horizontal"
+        app:flipFrom="right"
+        app:autoFlipBack="false">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <include layout="@layout/flip_card_back_layout" />
 
-            <ImageView
-                android:id="@+id/imageCardView"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:src="@mipmap/benjamin_lackey_698805_unsplash"
-                android:scaleType="centerCrop"
-                android:layout_centerHorizontal="true"/>
+        <include layout="@layout/flip_card_front_layout" />
 
-            <TextView
-                android:id="@+id/textCardView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="15dp"
-                android:textSize="20sp"
-                android:layout_centerHorizontal="true"
-                android:text="Test text"
-                android:layout_below="@+id/imageCardView"/>
-
-        </RelativeLayout>
-
-    </android.support.v7.widget.CardView>
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cardView">
+        android:layout_below="@+id/flipView">
 
         <ImageButton
             android:id="@+id/positiveButtonCardView"
