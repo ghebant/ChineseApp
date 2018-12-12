@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/characters"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:autoSizeTextType="uniform"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="@string/title_home" />
+
+    <TextView
+        android:id="@+id/english"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:autoSizeTextType="uniform"
+        android:background="@color/colorGrey"
+        android:gravity="center"
+        android:text="@string/title_home" />
+
+    <TextView
+        android:id="@+id/pinyin"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:autoSizeTextType="uniform"
+        android:background="@color/colorGreyDark"
+        android:gravity="center"
+        android:text="@string/title_home" />
+
+    <Button
+        android:id="@+id/generate_random_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="50dp"
+        android:text="New random" />
+
+    <Button
+        android:id="@+id/display_response_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="Cheat" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_add_black_24dp" />
+
+    <!--
+        app:layout_anchor="@+id/navigation"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_insetEdge="bottom" -->
+
+</android.support.design.widget.CoordinatorLayout>
